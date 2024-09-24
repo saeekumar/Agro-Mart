@@ -5,10 +5,11 @@
     border-width: 2px;
     border-style: thin; /* Added to specify solid border */
     border-color: black;
-    width: 250px;
+    width: 237px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds subtle shadow */
     transition: transform 0.3s, box-shadow 0.3s; /* Optional: adds smooth hover effect */
-    margin-right: 20px;
+    margin-right: 15px;
+    margin-bottom: 15px;
 }
 
 .main-bg{
@@ -32,8 +33,8 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Optional: increases shadow on hover */
 }
 .seed-card-img{
-    height: 200px;
-    width: 200px;
+    height: 180px;
+    width: 180px;
     margin-top: 25px;
 }
 .text-secondary{

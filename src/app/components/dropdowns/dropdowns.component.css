@@ -12,19 +12,32 @@
     background-color: rgb(9, 215, 9);
 }
 .dropdown-menu {
-    display: none; /* Hide the dropdown by default */
+    display: none; 
 }
 
 .dropdown:hover .dropdown-menu {
-    display: block; /* Show the dropdown on hover */
+    display: block; 
 }
-.list-head{
+.dropdown-center:hover .dropdown-menu {
+    display: block; 
+}
+.dropdown-header{
     color: rgb(9, 215, 9);
 }
-.list-item:hover{
+a:hover{
     color: orangered;
 }
 .hr-line{
     margin: 2px;
     color: rgb(154, 154, 154);
 }
+
+@media (max-width: 576px) {
+    .btn-dropdown {
+        width: 100%; /* Full width on small screens */
+        margin-bottom: 10px; /* Spacing between buttons */
+    }
+}
+  
+  
+  
