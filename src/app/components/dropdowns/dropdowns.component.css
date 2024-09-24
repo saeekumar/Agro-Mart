@@ -18,9 +18,7 @@
 .dropdown:hover .dropdown-menu {
     display: block; 
 }
-.dropdown-center:hover .dropdown-menu {
-    display: block; 
-}
+
 .dropdown-header{
     color: rgb(9, 215, 9);
 }
@@ -32,12 +30,7 @@ a:hover{
     color: rgb(154, 154, 154);
 }
 
-@media (max-width: 576px) {
-    .btn-dropdown {
-        width: 100%; /* Full width on small screens */
-        margin-bottom: 10px; /* Spacing between buttons */
-    }
-}
+
   
   
   
