@@ -1,0 +1,30 @@
+.btn-dropdown{
+    color: rgb(80, 79, 79);
+    background-color: transparent;
+    border-width: 0px;
+    width: auto;
+    height: 40px;
+    margin: 5px;
+}
+
+.btn-dropdown:hover  {
+    color: white;
+    background-color: rgb(9, 215, 9);
+}
+.dropdown-menu {
+    display: none; /* Hide the dropdown by default */
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block; /* Show the dropdown on hover */
+}
+.list-head{
+    color: rgb(9, 215, 9);
+}
+.list-item:hover{
+    color: orangered;
+}
+.hr-line{
+    margin: 2px;
+    color: rgb(154, 154, 154);
+}
