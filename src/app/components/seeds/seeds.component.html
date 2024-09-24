@@ -1,0 +1,87 @@
+
+<div class="main-bg">
+    <h1></h1>
+    <div class="container">
+        <h1 class="text-center">Seed's</h1>
+        <div class="row" >
+            <div class="seeds-card col col-md-6 col-xl-2 " *ngFor="let seed of seeds">
+            <div class="d-flex flex-row">
+                <div>
+                <img src={{seed.img}} class="seed-card-img">
+            
+                <h1>{{seed.title}}</h1>
+                <p>{{seed.category}}</p>
+                <div class="d-flex flex-row">
+                <h6>{{seed.ruppee|currency:'INR'}}</h6>
+                <h6 class="text-secondary mx-2">{{orgRuppee|currency:'INR'}}</h6>
+                </div>
+                <i class="fa-solid fa-tag i-design"><span> saved price {{seed.orgRuppee|currency:'INR'}} </span> </i>
+                </div>
+                <div>
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+            </div>
+            
+            </div>
+            <!-- <div class="seeds-card col col-md-6 col-xl-3">
+                <div class="d-flex flex-row">
+                    <div>
+                    <img src="https://cdn.shopify.com/s/files/1/0722/2059/products/Sahoo.jpg?v=1671198625&width=256" class="seed-card-img">
+                
+                    <h1>SAAHO TAMATO SEEDS</h1>
+                    <p>Sygenta</p>
+                    <div class="d-flex flex-row">
+                    <h6>{{ruppee|currency:'INR'}}</h6>
+                    <h6 class="text-secondary mx-2">{{orgRuppee|currency:'INR'}}</h6>
+                    </div>
+                    <i class="fa-solid fa-tag i-design"><span> saved price {{ruppee|currency:'INR'}} </span> </i>
+                    </div>
+                    <div>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+                
+                </div>
+            <div class="seeds-card col col-md-6 col-xl-3">
+                <div class="d-flex flex-row">
+                    <div>
+                    <img src="https://cdn.shopify.com/s/files/1/0722/2059/products/Sahoo.jpg?v=1671198625&width=256" class="seed-card-img">
+                
+                    <h1>SAAHO TAMATO SEEDS</h1>
+                    <p>Sygenta</p>
+                    <div class="d-flex flex-row">
+                    <h6>{{ruppee|currency:'INR'}}</h6>
+                    <h6 class="text-secondary mx-2">{{orgRuppee|currency:'INR'}}</h6>
+                    </div>
+                    <i class="fa-solid fa-tag i-design"><span> saved price {{ruppee|currency:'INR'}} </span> </i>
+                    </div>
+                    <div>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+                
+                </div>
+            <div class="seeds-card col col-md-6 col-xl-3">
+                <div class="d-flex flex-row">
+                    <div>
+                    <img src="https://cdn.shopify.com/s/files/1/0722/2059/products/Sahoo.jpg?v=1671198625&width=256" class="seed-card-img">
+                
+                    <h1>SAAHO TAMATO SEEDS</h1>
+                    <p>Sygenta</p>
+                    <div class="d-flex flex-row">
+                    <h6>{{ruppee|currency:'INR'}}</h6>
+                    <h6 class="text-secondary mx-2">{{orgRuppee|currency:'INR'}}</h6>
+                    </div>
+                    <i class="fa-solid fa-tag i-design"><span> saved price {{ruppee|currency:'INR'}} </span> </i>
+                    </div>
+                    <div>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+                
+                </div> -->
+             
+
+        </div>
+    </div>
+</div>

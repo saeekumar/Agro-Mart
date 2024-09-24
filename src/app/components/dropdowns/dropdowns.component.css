@@ -1,0 +1,43 @@
+.btn-dropdown{
+    color: rgb(80, 79, 79);
+    background-color: transparent;
+    border-width: 0px;
+    width: auto;
+    height: 40px;
+    margin: 5px;
+}
+
+.btn-dropdown:hover  {
+    color: white;
+    background-color: rgb(9, 215, 9);
+}
+.dropdown-menu {
+    display: none; 
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block; 
+}
+.dropdown-center:hover .dropdown-menu {
+    display: block; 
+}
+.dropdown-header{
+    color: rgb(9, 215, 9);
+}
+a:hover{
+    color: orangered;
+}
+.hr-line{
+    margin: 2px;
+    color: rgb(154, 154, 154);
+}
+
+@media (max-width: 576px) {
+    .btn-dropdown {
+        width: 100%; /* Full width on small screens */
+        margin-bottom: 10px; /* Spacing between buttons */
+    }
+}
+  
+  
+  
