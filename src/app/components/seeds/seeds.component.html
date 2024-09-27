@@ -20,12 +20,13 @@
                         </i>
                         <div class="d-flex flex-row my-2">
                             <h6>Size:</h6>
-                            <button class="btn btn-outline-dark mx-2" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                            (click)="selectQuantity(seed)">Select quantity</button>
+                            <button class="btn btn-outline-dark mx-2" >Select quantity</button>
                         </div>
                     </div>
                     <div>
                         <i class="fa-regular fa-heart"></i>
+                        <input class="form-check-input" type="checkbox" (change)="onCheckboxChange(seed, $event)" id="flexCheck{{seed.id}}">
+
                     </div>
                 </div>
             </div>
@@ -36,6 +37,7 @@
 
   
   <!-- Modal -->
+  <div *ngIf="isShowPopUp">
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
@@ -69,3 +71,4 @@
       </div>
     </div>
   </div>
+</div>

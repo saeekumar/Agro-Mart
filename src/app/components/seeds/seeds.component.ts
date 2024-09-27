@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { WishlistService } from 'src/app/_services/wishlist.service';
 
 @Component({
   selector: 'app-seeds',
@@ -7,6 +9,7 @@ import { Component } from '@angular/core';
 })
 export class SeedsComponent {
 seedItem:any;
+isShowPopUp:boolean=false
 seeds:any[]=[
   {
     title:"SAAHO TAMATO SEEDS",
@@ -46,9 +49,23 @@ seeds:any[]=[
   },
 
 ];
+constructor(private wishlistService:WishlistService,private router:Router){
+
+}
 
 selectQuantity(item:any){
    this.seedItem=item;
    console.log(this.seedItem)
+   this.isShowPopUp=true;
+}
+closePopUp(){
+   this.isShowPopUp=false;
+   this.seedItem=null;
+}
+onCheckboxChange(product: any, event: any) {
+  if (event.target.checked) {
+    this.wishlistService.addToWishlist(product);
+    this.router.navigate(['/wishlist']); 
+  }
 }
 }
