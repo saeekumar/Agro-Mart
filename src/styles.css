@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+.content {
+    min-height: calc(100% - 56px); /* Adjust this value based on your footer height */
+}
