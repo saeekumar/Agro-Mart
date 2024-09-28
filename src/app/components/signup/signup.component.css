@@ -1,0 +1,25 @@
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #f1eff2;
+    
+    }
+    
+    .card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+    }
+    .card-registration .select-arrow {
+    top: 13px;
+    }
+    .text-danger {
+        color: red;
+        font-size: 0.875rem;
+      }
+      
+      .btn-success {
+        padding: 10px 20px;
+        font-size: 1.25rem;
+      }
+      
