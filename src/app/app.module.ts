@@ -7,8 +7,6 @@ import { SyngentaSeedsComponent } from './components/syngenta-seeds/syngenta-see
 import { TrackOrderComponent } from './components/track-order/track-order.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
-
-
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
@@ -22,7 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PaymentsComponent } from './components/payments/payments.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
-import {HttpClientModule} from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -48,8 +46,8 @@ import {HttpClientModule} from '@angular/common/http'
     NgbModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    HttpClientModule],
-  bootstrap: [AppComponent]
-  
+    HttpClientModule,
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
