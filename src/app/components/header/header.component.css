@@ -1,0 +1,74 @@
+/* Topnavbar */
+.topnav {
+  background-color:rgb(44,59,54);
+  overflow: hidden;
+  height: 35px;
+  width: 100%;
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 6px 6px;
+  text-decoration: none;
+  font-size: small;
+}
+.topnav a:hover {
+  cursor: pointer;
+  color: green;
+}
+.topnav a.active {
+  background-color:rgba(2, 57, 2, 0.977);
+  color: white;
+}
+.topnav-right {
+  float: right;
+}
+.data{
+  background-color: chocolate;
+  border-radius: 5px;
+  padding: 4px 6px;
+  margin-top: 1.5px;
+}
+
+/* search bar */
+.form-control{
+  width: 270px;
+  border-color: black;
+
+}
+/* Search button */
+.btn1{
+  background-color: chocolate;
+  color: whitesmoke;
+  border: none;
+  border-radius: 5px;
+}
+/* Buttons(English,hindhi) */
+.btn2{
+   background-color: lightgreen;
+   height: 40px;
+   border-radius: 4px;
+   color: black;
+   border: none;
+   
+   
+}
+.btn3{
+background-color: lightgray;
+height: 40px;
+border-radius: 4px;
+color: black;
+border: none;
+width: 55px;
+}
+
+/* icons */
+
+.btn4 {
+font-size: 18px;
+color: gray;
+}
+.icon2{
+font-size: 18px;
+}

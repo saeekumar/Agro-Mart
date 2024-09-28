@@ -1,0 +1,26 @@
+.row{
+   padding: 10px;
+   background-color:rgb(44,59, 54);
+   color:rgba(255, 255, 255, 0.484);
+}
+.links{
+   padding: 40px;
+}
+.contacts{
+   padding: 40px;
+}
+.nbtn{
+   background-color: chocolate;
+   color: white;
+   border-radius: 5px;
+   border-color: chocolate;
+}
+.nbtn a{
+   text-decoration: none;
+   color: white;
+}
+.text-center{
+   background-color:rgb(44,59, 54);
+   color:rgba(255, 255, 255, 0.484);
+   color: white;
+}
