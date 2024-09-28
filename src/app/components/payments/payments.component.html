@@ -1,0 +1,53 @@
+<div class="container mt-5 text-center">
+  <button (click)="processPayment()" class="btn btn-primary mb-4">
+    Process Payment
+  </button>
+
+  <ngb-alert *ngIf="paymentStatus === 'success'" type="success">
+    <svg
+      data-id="7"
+      xmlns="http://www.w3.org/2000/svg"
+      width="100"
+      height="80"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="h-16 w-16 text-green-500"
+    >
+      <circle cx="12" cy="12" r="10"></circle>
+      <path d="m9 12 2 2 4-4"></path>
+    </svg>
+    <h2>Payment successfull</h2>
+    <div class="row m-0">
+      <div class="d-flex justify-content-between mb-3">
+        <p class="textmuted">Quantity</p>
+        <p class="fs-14 fw-bold">1</p>
+      </div>
+      <div class="d-flex justify-content-between mb-3">
+        <p class="textmuted">Amount</p>
+        <p><span class="fas fa-dollar-sign pe-1"></span>1450</p>
+      </div>
+      <div class="d-flex justify-content-between mb-3">
+        <p class="textmuted">Reference</p>
+        <p class="fs-14 fw-bold">123456789</p>
+      </div>
+      <span
+        ><button (click)="resetPayment()" class="btn btn-light" routerLink="">
+          Shop More
+        </button></span
+      >
+    </div>
+  </ngb-alert>
+
+  <ngb-alert *ngIf="paymentStatus === 'failure'">
+    <strong>Payment Failed!</strong>
+    <div class="row m-0">
+      <div class="col-12 mb-5 p-1">
+        <button (click)="resetPayment()" class="btn btn-light">Reset</button>
+      </div>
+    </div>
+  </ngb-alert>
+</div>

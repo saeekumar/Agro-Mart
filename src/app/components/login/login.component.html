@@ -1,0 +1,59 @@
+<section class="vh-100 gradient-custom">
+  <div class="container py-2 ">
+    <div class="row d-flex justify-content-center align-items-center ">
+      <div class="col-8 col-md-6 col-lg-6 col-xl-4">
+        <div class="card bg-light text-black mt-5" style="border-radius: 1rem;">
+          <div class="card-body p-2 ">
+           <form [formGroup]="loginForm"(ngsubmit)="checkLogin()">
+            <div class="mb-md-5 mt-md-1">
+
+              <h2 class=" mb-5 text-uppercase text-center">Login</h2>
+           
+
+              <div data-mdb-input-init class="form-outline form-white mb-4">
+                <label class="form-label" for="typemobilenumberX">Phone Number</label>
+                <input class="form-control" formControlName="phone">
+     
+        <div *ngIf="loginFC['phone'].errors">
+           <span class="text-danger" *ngIf="loginFC['phone'].touched&&loginFC['phone'].errors['required']">Required
+            Phone number</span> 
+        <span class="text-danger" *ngIf="loginFC['phone'].touched&&loginFC['phone'].errors['minlength']">minium 10 characters required</span>
+        <span class="text-danger" *ngIf="loginFC['phone'].touched&&loginFC['phone'].errors['maxlength']">maximum 10 characters required</span>
+
+        </div>
+       
+              </div>
+
+              <div data-mdb-input-init class="form-outline form-white mb-4">
+                <label class="form-label" for="typePasswordX">Password</label>
+                <input class="form-control" formControlName="password" >
+                
+                  <div *ngIf="loginFC['password'].errors">
+                      <span class="text-danger" *ngIf="loginFC['password'].touched&&loginFC['password'].errors['required']">Required
+                          password</span>
+                      <span class="text-danger" *ngIf="loginFC['password'].touched&&loginFC['password'].errors['minlength']">minium 6 characters required</span>
+                      <span class="text-danger" *ngIf="loginFC['password'].touched&&loginFC['password'].errors['maxlength']">maximum 6 characters required</span>
+
+                  </div>
+              
+              </div>
+
+             <div class="text-center">
+
+              <br>
+              <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg px-5" type="submit">Login</button>
+              <br>
+              <br>
+              <div>
+                <p class="mb-1">Don't have an account? <a class=" fw-bold">Sign Up</a>
+                </p>
+              </div>
+             </div>
+            </div>
+           </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
