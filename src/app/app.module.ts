@@ -3,6 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SyngentaSeedsComponent } from './components/syngenta-seeds/syngenta-seeds.component';
+import { TrackOrderComponent } from './components/track-order/track-order.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
+
+
+
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
@@ -21,30 +27,29 @@ import {HttpClientModule} from '@angular/common/http'
 @NgModule({
   declarations: [
     AppComponent,
+    SyngentaSeedsComponent,
+    TrackOrderComponent,
     ProductsComponent,
     DropdownsComponent,
-    SeedsComponent,
     SignupComponent,
     PaymentsComponent,
     WishlistComponent,
-
     HeaderComponent,
     FooterComponent,
     LoginComponent,
     CartComponent,
     OrderComponent,
-    ProductsComponent
+    ProductsComponent,
+    SeedsComponent,
   ],
   imports: [
-    BrowserModule,
     FormsModule,
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    HttpClientModule
-  ],
-  providers: [],
+    HttpClientModule],
   bootstrap: [AppComponent]
+  
 })
 export class AppModule { }
