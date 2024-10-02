@@ -22,7 +22,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PaymentsComponent } from './components/payments/payments.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { ProfileDetailsComponent } from './components/profile-details/profile-details.component';
+import { ProfileUpdateComponent } from './components/profile-update/profile-update.component';
+import { CategoryComponent } from './components/category/category.component';
+
 
 @NgModule({
   declarations: [
@@ -41,6 +45,9 @@ import {HttpClientModule} from '@angular/common/http'
     OrderComponent,
     ProductsComponent,
     SeedsComponent,
+    ProfileDetailsComponent,
+    ProfileUpdateComponent,
+    CategoryComponent,
   ],
   imports: [
     FormsModule,
