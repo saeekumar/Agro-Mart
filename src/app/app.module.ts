@@ -6,6 +6,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SyngentaSeedsComponent } from './components/syngenta-seeds/syngenta-seeds.component';
 import { TrackOrderComponent } from './components/track-order/track-order.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2658a81fcce5a342d10003056318ab6b789a834b
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
@@ -23,6 +27,11 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { LoginService } from './_services/login.service';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { TokenService } from './_services/token.service';
+import { ProfileDetailsComponent } from './components/profile-details/profile-details.component';
+import { ProfileUpdateComponent } from './components/profile-update/profile-update.component';
+import { CategoryComponent } from './components/category/category.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +50,9 @@ import { TokenService } from './_services/token.service';
     ProductsComponent,
     SeedsComponent,
     ContactUsComponent,
+    ProfileDetailsComponent,
+    ProfileUpdateComponent,
+    CategoryComponent,
   ],
   imports: [
     FormsModule,
@@ -57,4 +69,4 @@ import { TokenService } from './_services/token.service';
   bootstrap: [AppComponent]
   
 })
-export class AppModule { }
+export class AppModule {}
