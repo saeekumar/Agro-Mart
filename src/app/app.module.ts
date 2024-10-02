@@ -16,7 +16,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PaymentsComponent } from './components/payments/payments.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { AboutUsComponent } from './components/about-us/about-us.component'
 
 @NgModule({
   declarations: [
@@ -27,13 +28,13 @@ import {HttpClientModule} from '@angular/common/http'
     SignupComponent,
     PaymentsComponent,
     WishlistComponent,
-
     HeaderComponent,
     FooterComponent,
     LoginComponent,
     CartComponent,
     OrderComponent,
-    ProductsComponent
+    ProductsComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
