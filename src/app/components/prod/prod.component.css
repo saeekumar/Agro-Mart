@@ -1,0 +1,246 @@
+.cart-top{
+
+    background-color:rgb(234 245 241);
+    font-size: large;
+   
+}
+ .item{
+    margin:0px 25px;
+    text-align: center;
+    padding: 0%;
+ }
+flex{
+    width: 160;
+    height: 160;
+
+    .flex-row{
+        padding-left: 4;
+    }
+
+ /* loading="lazy";
+  width="160";
+   height="160" decoding="async" data-nimg="1" class="h-40 w-40"  */
+}
+
+
+
+
+/* .card{
+   
+    height: 300px;
+    width: 120px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+} */
+
+/* .justify-end{
+   left: 100% ;
+    
+
+} */
+
+
+.product-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    border-width: 2px;
+    border-style: thin; /* Added to specify solid border */
+    border-color: black;
+    width: 243px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds subtle shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Optional: adds smooth hover effect */
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .main-bg {
+    /* background-color: rgb(234 245 241); */
+    padding: 10px;
+  }
+  
+  .product-card h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: black;
+  }
+  
+  .product-card p {
+    font-size: 14px;
+    color: gray;
+  }
+  .product-card:hover {
+    transform: translateY(-5px); /* Optional: slightly moves card up on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Optional: increases shadow on hover */
+  }
+  .product-card-img {
+    height: 180px;
+    width: 180px;
+    margin-top: 25px;
+  }
+  .text-secondary {
+    text-decoration: line-through;
+  }
+  .i-design {
+    font-size: 16px;
+    color: rgb(9, 215, 9);
+  }
+  .discount-tag {
+    position: absolute;
+    top: -13px;
+    left: -13px;
+    background-color: orange;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border-top-left-radius: 13px;
+    border-bottom-right-radius: 13px;
+  }
+
+  /* .items{
+   
+    width: 20px;
+    height: 20px;
+  } */
+   .items-center{
+    background-color:rgb(234 245 241);
+   }
+.cart-icon{
+    text-align: left;
+    text-emphasis-color: red;
+}
+
+
+
+
+/* .card-list{
+    background-color:rgb(234 245 241);
+    padding-left: 23;
+    margin: 23;
+}
+
+
+
+
+
+
+body
+{
+    font-family: 'Roboto', sans-serif;
+}
+a
+{
+    text-decoration: none;
+}
+.product-card {
+    width: 300px;
+    position: relative;
+    box-shadow: 0 2px 7px #dfdfdf;
+    margin: 50px auto;
+    background: #fafafa;
+}
+
+.badge {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    background: red;
+    color: #fff;
+    padding: 3px 10px;
+}
+
+.product-tumb {
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    height: 300px;
+    padding: 50px;
+    background: #f0f0f0;
+}
+
+.product-tumb img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.product-details {
+    padding: 30px;
+}
+
+.product-catagory {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ccc;
+    margin-bottom: 18px;
+}
+
+.product-details h4 a {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    color: #363636;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.product-details h4 a:hover {
+    color: #fbb72c;
+}
+
+.product-details p {
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 18px;
+    color: #999;
+}
+
+.product-bottom-details {
+    overflow: hidden;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.product-bottom-details div {
+    float: left;
+    width: 50%;
+}
+
+.product-price {
+    font-size: 18px;
+    color: #fbb72c;
+    font-weight: 600;
+}
+
+.product-price small {
+    font-size: 80%;
+    font-weight: 400;
+    text-decoration: line-through;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.product-links {
+    text-align: right;
+  
+}
+
+.product-links a {
+    display: inline-block;
+    margin-left: 5px;
+    color: #e1e1e1;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.product-links a:hover {
+    color: #fbb72c;
+}
+
+ */
