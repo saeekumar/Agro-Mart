@@ -10,6 +10,7 @@ import { PaymentsComponent } from './components/payments/payments.component';
 import { LoginComponent } from './components/login/login.component';
 import { CartComponent } from './components/cart/cart.component';
 import { OrderComponent } from './components/order/order.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { ProfileDetailsComponent } from './components/profile-details/profile-details.component';
 import { ProfileUpdateComponent } from './components/profile-update/profile-update.component';
@@ -19,7 +20,7 @@ const routes: Routes = [
    { path: 'profile', component: ProfileDetailsComponent },
  
 
-  {path:'profileupdate',component:ProfileUpdateComponent},
+  {path:'profile-update',component:ProfileUpdateComponent},
 
   {path:'category',component:CategoryComponent},
   {
@@ -50,8 +51,12 @@ const routes: Routes = [
     component: OrderComponent,
     path: 'order',
   },
+  {
+    component: AboutUsComponent,
+    path: 'aboutUs',
+  },
   { component: TrackOrderComponent, path: 'trackorder' },
-  { component: ProductDetailsComponent, path: 'productdetails' },
+  { component: ProductDetailsComponent, path: 'product-details' },
   { component: SyngentaSeedsComponent, path: 'syngentaseeds' },
   { component: ContactUsComponent, path: 'contact-us' },
 

@@ -20,6 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PaymentsComponent } from './components/payments/payments.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
+import { AboutUsComponent } from './components/about-us/about-us.component'
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { LoginService } from './_services/login.service';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
@@ -45,6 +46,7 @@ import { CategoryComponent } from './components/category/category.component';
     CartComponent,
     OrderComponent,
     ProductsComponent,
+    AboutUsComponent,
     SeedsComponent,
     ContactUsComponent,
     ProfileDetailsComponent,
