@@ -3,6 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SyngentaSeedsComponent } from './components/syngenta-seeds/syngenta-seeds.component';
+import { TrackOrderComponent } from './components/track-order/track-order.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
+
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
@@ -16,15 +20,23 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PaymentsComponent } from './components/payments/payments.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
-import {HttpClientModule} from '@angular/common/http';
 import { AboutUsComponent } from './components/about-us/about-us.component'
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import { LoginService } from './_services/login.service';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { TokenService } from './_services/token.service';
+import { ProfileDetailsComponent } from './components/profile-details/profile-details.component';
+import { ProfileUpdateComponent } from './components/profile-update/profile-update.component';
+import { CategoryComponent } from './components/category/category.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    SyngentaSeedsComponent,
+    TrackOrderComponent,
     ProductsComponent,
     DropdownsComponent,
-    SeedsComponent,
     SignupComponent,
     PaymentsComponent,
     WishlistComponent,
@@ -34,10 +46,14 @@ import { AboutUsComponent } from './components/about-us/about-us.component'
     CartComponent,
     OrderComponent,
     ProductsComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    SeedsComponent,
+    ContactUsComponent,
+    ProfileDetailsComponent,
+    ProfileUpdateComponent,
+    CategoryComponent,
   ],
   imports: [
-    BrowserModule,
     FormsModule,
     AppRoutingModule,
     NgbModule,
@@ -45,7 +61,11 @@ import { AboutUsComponent } from './components/about-us/about-us.component'
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+    
+    
+  providers:[{provide:HTTP_INTERCEPTORS,useClass:TokenService,multi:true}],
+
   bootstrap: [AppComponent]
+  
 })
-export class AppModule { }
+export class AppModule {}
