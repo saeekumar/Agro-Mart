@@ -6,9 +6,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SyngentaSeedsComponent } from './components/syngenta-seeds/syngenta-seeds.component';
 import { TrackOrderComponent } from './components/track-order/track-order.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
-
-
-
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
@@ -22,8 +19,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PaymentsComponent } from './components/payments/payments.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
-import {HttpClientModule} from '@angular/common/http'
-
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import { LoginService } from './_services/login.service';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { TokenService } from './_services/token.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +40,7 @@ import {HttpClientModule} from '@angular/common/http'
     OrderComponent,
     ProductsComponent,
     SeedsComponent,
+    ContactUsComponent,
   ],
   imports: [
     FormsModule,
@@ -48,7 +48,12 @@ import {HttpClientModule} from '@angular/common/http'
     NgbModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    HttpClientModule],
+    HttpClientModule
+  ],
+    
+    
+  providers:[{provide:HTTP_INTERCEPTORS,useClass:TokenService,multi:true}],
+
   bootstrap: [AppComponent]
   
 })

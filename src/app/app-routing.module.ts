@@ -10,6 +10,7 @@ import { PaymentsComponent } from './components/payments/payments.component';
 import { LoginComponent } from './components/login/login.component';
 import { CartComponent } from './components/cart/cart.component';
 import { OrderComponent } from './components/order/order.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
 
 const routes: Routes = [
   {
@@ -18,7 +19,7 @@ const routes: Routes = [
   },
   {
     component: SignupComponent,
-    path: 'signUp',
+    path: 'signup',
   },
   {
     component: WishlistComponent,
@@ -43,6 +44,9 @@ const routes: Routes = [
   { component: TrackOrderComponent, path: 'trackorder' },
   { component: ProductDetailsComponent, path: 'productdetails' },
   { component: SyngentaSeedsComponent, path: 'syngentaseeds' },
+  { component: ContactUsComponent, path: 'contact-us' },
+
+
 
 ];
 
