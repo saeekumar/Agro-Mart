@@ -7,8 +7,6 @@ import { SyngentaSeedsComponent } from './components/syngenta-seeds/syngenta-see
 import { TrackOrderComponent } from './components/track-order/track-order.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
-
-
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
@@ -55,8 +53,8 @@ import { CategoryComponent } from './components/category/category.component';
     NgbModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    HttpClientModule],
-  bootstrap: [AppComponent]
-  
+    HttpClientModule,
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
