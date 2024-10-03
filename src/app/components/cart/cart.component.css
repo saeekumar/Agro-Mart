@@ -1,5 +1,24 @@
 h2{
     margin-left: 15%;
     color:rgb(36, 89, 58);
-    
-    }
+}
+.text-bold{
+    font-size: 20px;
+}
+
+.card-empty{
+    height: 85vh;
+    margin: 25px;
+    padding: 30px;
+    color: darkorchid;
+}
+.center{
+    top: 40%;
+    left: 40%;
+    text-align: center;
+    transform: translate(-25%,-25%);
+    position: absolute;   
+}
+.card-title{
+    font-size: 25px;
+}
