@@ -1,0 +1,15 @@
+<p>category works!</p>
+
+<div class="container">
+  <div class="row">
+    <ng-container *ngFor="let category of categories">
+      <div class="card col-md-2">
+        <p>{{ category.id }}</p>
+        <p>{{ category.c_name }}</p>
+       <div class="align-center"><img src="{{ category.c_image }}" alt="" ></div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+ 

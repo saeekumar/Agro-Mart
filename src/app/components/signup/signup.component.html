@@ -1,68 +1,76 @@
-<section class="vh-100 gradient-custom">
-  <div class="container py-5 h-100">
-    <div class="row justify-content-center align-items-center h-100">
-      <div class="col-12 col-lg-9 col-xl-7">
-        <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
-          <div class="card-body p-4 p-md-5">
-            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Sign Up</h3>
-            <form [formGroup]="signUpForm" (ngSubmit)="submit()">
-              
-              <div class="row">
-                <div class="col-md-6 mb-4">
-                  <div class="form-outline">
-                    <label class="form-label" for="name">Name</label>
-                    <input id="name" type="text" formControlName="name" class="form-control form-control-lg" />
-                    <div *ngIf="signUpFC['name'].invalid && signUpFC['name'].touched" class="text-danger">
-                      Name is required
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-6 mb-4">
-                  <div class="form-outline">
-                    <label class="form-label" for="gender">Gender</label>
-                    <select id="gender" formControlName="gender" class="form-control form-control-lg">
-                      <option value="">Select Gender</option>
-                      <option value="male">Male</option>
-                      <option value="female">Female</option>
-                      <option value="others">Others</option>
-                    </select>
-                    <div *ngIf="signUpFC['gender'].invalid && signUpFC['gender'].touched" class="text-danger">
-                      Gender is required
-                    </div>
+<div class="container py-5">
+  <div class="row justify-content-center align-items-center h-100">
+    <div class="col-12 col-lg-9 col-xl-7">
+      <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+        <div class="card-body p-4 p-md-5">
+          <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 text-center">Sign Up</h3>
+          <form [formGroup]="signUpForm"  (ngSubmit)="submit()">
+            
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <label class="form-label" for="name">Name</label>
+                  <input id="name" type="text" formControlName="name" class="form-control form-control-md" />
+                  <div *ngIf="signUpFC['name'].invalid && signUpFC['name'].touched" class="text-danger">
+                    Name is required
                   </div>
                 </div>
               </div>
 
-              <div class="row">
-                <div class="col-md-6 mb-4 pb-2">
-                  <div class="form-outline">
-                    <label class="form-label" for="email">Email</label>
-                    <input id="email" type="email" formControlName="email" class="form-control form-control-lg" />
-                    <div *ngIf="signUpFC['email'].invalid && signUpFC['email'].touched" class="text-danger">
-                      Please enter a valid email
-                    </div>
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <label class="form-label" for="gender">Gender</label>
+                  <select id="gender" formControlName="gender" class="form-control form-control-md">
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="others">Others</option>
+                  </select>
+                  <div *ngIf="signUpFC['gender'].invalid && signUpFC['gender'].touched" class="text-danger">
+                    Gender is required
                   </div>
                 </div>
+              </div>
+            </div>
 
-                <div class="col-md-6 mb-4 pb-2">
-                  <div class="form-outline">
-                    <label class="form-label" for="phone">Phone Number</label>
-                    <input id="phone" type="tel" formControlName="phone" class="form-control form-control-lg" />
-                    <div *ngIf="signUpFC['phone'].invalid && signUpFC['phone'].touched" class="text-danger">
-                      Please enter a valid phone number
-                    </div>
+            <div class="row">
+              <div class="col-md-6 mb-4 pb-2">
+                <div class="form-outline">
+                  <label class="form-label" for="email">Email</label>
+                  <input id="email" type="email" formControlName="email" class="form-control form-control-md" />
+                  <div *ngIf="signUpFC['email'].invalid && signUpFC['email'].touched" class="text-danger">
+                    Please enter a valid email
                   </div>
                 </div>
               </div>
 
-              <div class="d-flex flex-row justify-content-center pt-2">
-                <button type="submit" class="btn btn-success" [disabled]="signUpForm.invalid">Submit</button>
+              <div class="col-md-6 mb-4 pb-2">
+                <div class="form-outline">
+                  <label class="form-label" for="phone">Phone Number</label>
+                  <input id="phone" type="tel" formControlName="phone" class="form-control form-control-md" />
+                  <div *ngIf="signUpFC['phone'].invalid && signUpFC['phone'].touched" class="text-danger">
+                    Please enter a valid phone number
+                  </div>
+                </div>
               </div>
-            </form>
-          </div>
+
+              <div class="col-md-6 mb-4 pb-2">
+                <div class="form-outline">
+                  <label class="form-label" for="email">Password</label>
+                  <input id="password" type="password" formControlName="password" class="form-control form-control-md" />
+                  <div *ngIf="signUpFC['password'].invalid && signUpFC['password'].touched" class="text-danger">
+                    Please enter a password
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex flex-row justify-content-center pt-2">
+              <button type="submit" class="btn btn-success" [disabled]="signUpForm.invalid">Submit</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
   </div>
-</section>
+</div>
