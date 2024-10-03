@@ -149,42 +149,41 @@ a:hover{
     padding: 10px;
   }
   
-  .items-center{
-    background-color:rgb(234 245 241);
-   }
-   .image-container {
+  .items {
+    margin: 2px 9px;
+    margin: 10px;
+    flex: 1 1 22%;
+    max-width: 22%;
+  }
+  .items img {
+    width: 340px; /* Increase the width of the images */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures that the images cover the space without distortion */
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .image-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
   }
-
-  .items {
-    flex: 1 1 22%;
-    max-width: 22%;
-  }
-
-  .items img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-  }
-
-  /* Media queries for responsiveness */
+  
   @media (max-width: 1200px) {
     .items {
       flex: 1 1 30%;
       max-width: 30%;
     }
   }
-
+  
   @media (max-width: 768px) {
     .items {
       flex: 1 1 45%;
       max-width: 45%;
     }
   }
-
+  
   @media (max-width: 576px) {
     .items {
       flex: 1 1 90%;
@@ -192,76 +191,15 @@ a:hover{
     }
   }
 
-  .brand-bg {
-    padding: 15px;
+  .bb {
     background-color: rgb(234 245 241);
   }
-
-  .brand-container {
-    display: flex;
-    /* overflow-x: auto; */
-    padding: 10px;
-  }
-
-  .brand-card {
-    flex: 0 0 auto;
-    text-align: center;
-  }
-
-  .brand-logo {
-    max-width: 150px;
-    height: auto;
-    border-radius: 5px;
-  }
-
-  /* Add horizontal scrolling */
-  /* .brand-scroll {
-    overflow-x: auto;
-  } */
-
-  .brand-container::-webkit-scrollbar {
-    height: 8px;
-  }
-
-  .brand-container::-webkit-scrollbar-thumb {
-    background: #ccc;
-    border-radius: 10px;
-  }
-
-  /* Media Queries for responsiveness */
-  @media (max-width: 768px) {
-    .brand-logo {
-      max-width: 100px;
-    }
-
-    .brand-card {
-      margin: 5px;
-    }
-  }
-
-  @media (max-width: 576px) {
-    .brand-logo {
-      max-width: 80px;
-    }
-
-    .brand-card {
-      margin: 3px;
-    }
-  }
-
+  
   .brand-bg {
     padding: 20px;
-     overflow:scroll;
-    background-color: rgb(234 245 241);
-    overflow-x: hidden;
     display: flex;
     align-items: center;
   }
-  .brand-ag{
-     background-color: rgb(234 245 241);
-    text-align: center;
-  }
-  
   
   .brand-card {
     border: 1px solid #ddd;
@@ -275,17 +213,10 @@ a:hover{
     align-items: center;
   }
   
-  
-  
-  .brand-scroll {
-    overflow-x: scroll; /* Allow horizontal scroll */
-    white-space: nowrap; /* Prevent line break in logos */
-    -ms-overflow-style: none;  /* Hide scrollbar in Internet Explorer */
-    scrollbar-width: none; /* Hide scrollbar in Firefox */
-  }
-  
-  .brand-scroll::-webkit-scrollbar {
-    display: none; /* Hide scrollbar in Chrome, Safari, and Opera */
+  .brand-card-img {
+    height: 590px;
+    width: 200px;
+    padding: 10px;
   }
   
   .brand-scroll .d-flex {
@@ -299,38 +230,29 @@ a:hover{
     height: auto;
     margin-right: 15px;
   }
-
-  .container {
-    overflow-y: hidden; /* Prevent vertical scrolling */
+  
+  .brand-scroll {
+    overflow-x: auto; /* Allow horizontal scrolling */
+    white-space: nowrap; 
+    display: flex; /* Use flexbox for alignment */
+    -ms-overflow-style: none; /* Hide scrollbar in Internet Explorer */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    
   }
   
-  .product-scroll {
-    overflow-x: auto; /* Allow horizontal scrolling if necessary */
-    white-space: nowrap; /* Prevent items from wrapping */
+  @media (max-width: 768px) {
+    .brand-scroll {
+      display: block;
+      white-space: normal; /* Allow wrapping */
+      overflow-x: visible; /* Remove horizontal scroll */
+    }
+    
   }
   
-  .product-card {
-    display: inline-block; /* Make product cards display inline */
+  .brand-card {
+    display: inline-block; /* Ensure brand cards are inline */
     vertical-align: top; /* Align items to the top */
   }
 
-  .product-scroll {
-    overflow-x: scroll; /* Enable horizontal scroll */
-    white-space: nowrap; /* Prevents line breaks in products */
-    -ms-overflow-style: none;  /* Hides scrollbar for Internet Explorer */
-    scrollbar-width: none; /* Hides scrollbar for Firefox */
-  }
   
-  .product-scroll::-webkit-scrollbar {
-    display: none; /* Hides scrollbar for Chrome, Safari, and Opera */
-  }
-  
-  .product-card {
-    display: inline-block;
-    margin: 0 15px; /* Add some margin between product cards */
-  }
-  
-  .product-card img {
-    max-width: 100%; /* Ensures image scales properly */
-    height: auto;
-  }

@@ -11,9 +11,14 @@
                 <div class="form-outline">
                   <label class="form-label" for="name">Name</label>
                   <input id="name" type="text" formControlName="name" class="form-control form-control-md" />
-                  <div *ngIf="signUpFC['name'].invalid && signUpFC['name'].touched" class="text-danger">
-                    Name is required
-                  </div>
+                  <div *ngIf="signUpFC['name'].touched&&signUpFC['name'].errors" class="text-danger">
+                    <span *ngIf="signUpFC['name'].invalid && signUpFC['name'].touched">Enter Valid Name</span> <br>
+                    <span *ngIf="signUpFC['name'].touched&&signUpFC['name'].errors['minlength']" class="err">minimum 3 characters
+                        required</span><br>
+                    <span *ngIf="signUpFC['name'].touched&&signUpFC['name'].errors['maxlength']" class="err">maximum 50 characters
+                        allowed</span>
+    
+                </div>
                 </div>
               </div>
 
@@ -58,9 +63,17 @@
                 <div class="form-outline">
                   <label class="form-label" for="email">Password</label>
                   <input id="password" type="password" formControlName="password" class="form-control form-control-md" />
-                  <div *ngIf="signUpFC['password'].invalid && signUpFC['password'].touched" class="text-danger">
-                    Please enter a password
-                  </div>
+                <span *ngIf="signUpFC['password'].invalid && signUpFC['password'].touched" class="text-danger">
+                    Please enter a Valid password
+                  </span>
+                  <div *ngIf="signUpFC['password'].touched&&signUpFC['password'].errors" class="text-danger">
+                  <span *ngIf="signUpFC['password'].touched&&signUpFC['password'].errors['minlength']" >
+                    minimum 6 characters required
+                  </span>
+                <span *ngIf="signUpFC['password'].touched&&signUpFC['password'].errors['maxlength']" > 
+                    maxiimum 10 characters required
+                  </span>
+                </div>
                 </div>
               </div>
             </div>
