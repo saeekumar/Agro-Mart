@@ -12,8 +12,13 @@ export class ProfileDetailsComponent {
   data: any[] = [];
   selectedValue: any;
   empDetails: any;
+  users:any;
 
   constructor(private profileServ: ProfileUpdateService) {
+   
+  }
+
+  ngOnInit(){
     this.getProfileData();
   }
   getProfileData() {
@@ -27,7 +32,7 @@ export class ProfileDetailsComponent {
         }
       },
       error: (e) => {
-        console.log(e.msg);
+        // console.log(e.msg);
         console.log(e, 'error');
       },
     });
