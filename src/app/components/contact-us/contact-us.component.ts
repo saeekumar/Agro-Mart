@@ -13,10 +13,25 @@ export class ContactUsComponent {
   contactForm: FormGroup;
   constructor(private router: Router, private loginServ: LoginService) {
     this.contactForm = new FormGroup({
-      fullname: new FormControl('', [Validators.minLength(5)]),
-      email: new FormControl('', [Validators.minLength(6)]),
-      phone: new FormControl('', [Validators.minLength(10)]),
-      message: new FormControl('', [Validators.minLength(10)]),
+      fullname: new FormControl('', [
+        Validators.required,
+      Validators.minLength(5),
+      Validators.maxLength(20)
+      ]),
+      email: new FormControl('', [
+        Validators.required,
+        Validators.minLength(6)
+      ]),
+      phone: new FormControl('', [
+        Validators.required,
+        Validators.minLength(9),
+        Validators.maxLength(10),
+      ]),
+      message: new FormControl('', [
+        Validators.required,
+        Validators.minLength(10),
+        Validators.maxLength(100)
+      ]),
     });
   }
 
@@ -33,6 +48,8 @@ export class ContactUsComponent {
             alert(res.msg);
           } else {
             alert(res.msg);
+            this.contactForm.reset();
+            this.router.navigate(['']);
           }
         },
         error: (e) => {},
@@ -41,7 +58,7 @@ export class ContactUsComponent {
       alert('invalid form');
     }
 
-    //  alert("login sucessfully")
+      alert("login sucessfully")
   }
 
   get contactFC() {
