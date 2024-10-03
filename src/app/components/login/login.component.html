@@ -11,8 +11,8 @@
            
 
               <div data-mdb-input-init class="form-outline form-white mb-4">
-                <label class="form-label" for="typemobilenumberX">Phone Number</label>
-                <input class="form-control" formControlName="phone">
+                <label class="form-label" for="typemobilenumberX" >Phone Number</label>
+                <input class="form-control" formControlName="phone" placeholder="Enter a mobile number">
      
         <div *ngIf="loginFC['phone'].errors">
            <span class="text-danger" *ngIf="loginFC['phone'].touched&&loginFC['phone'].errors['required']">Phone number Required
@@ -26,7 +26,7 @@
 
               <div data-mdb-input-init class="form-outline form-white mb-4">
                 <label class="form-label" for="typePasswordX">Password</label>
-                <input class="form-control" formControlName="password" >
+                <input class="form-control" formControlName="password" placeholder="Enter password">
                 
                   <div *ngIf="loginFC['password'].errors">
                       <span class="text-danger" *ngIf="loginFC['password'].touched&&loginFC['password'].errors['required']">Required

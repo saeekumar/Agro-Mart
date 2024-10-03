@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule,NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,9 +28,10 @@ import { TokenService } from './_services/token.service';
 import { ProfileDetailsComponent } from './components/profile-details/profile-details.component';
 import { ProfileUpdateComponent } from './components/profile-update/profile-update.component';
 import { CategoryComponent } from './components/category/category.component';
-
+import { CommonModule } from '@angular/common';
 
 @NgModule({
+  schemas: [NO_ERRORS_SCHEMA],
   declarations: [
     AppComponent,
     SyngentaSeedsComponent,
@@ -52,6 +53,7 @@ import { CategoryComponent } from './components/category/category.component';
     ProfileDetailsComponent,
     ProfileUpdateComponent,
     CategoryComponent,
+    
   ],
   imports: [
     FormsModule,
@@ -59,7 +61,8 @@ import { CategoryComponent } from './components/category/category.component';
     NgbModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule
   ],
     
     
