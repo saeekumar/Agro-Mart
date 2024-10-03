@@ -52,6 +52,7 @@ import { CategoryComponent } from './components/category/category.component';
     ProfileDetailsComponent,
     ProfileUpdateComponent,
     CategoryComponent,
+    
   ],
   imports: [
     FormsModule,
