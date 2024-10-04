@@ -17,10 +17,10 @@ import { ProfileUpdateComponent } from './components/profile-update/profile-upda
 import { CategoryComponent } from './components/category/category.component';
 
 const routes: Routes = [
-   { path: 'profile', component: ProfileDetailsComponent },
- 
+   { path: 'profile-details', component: ProfileDetailsComponent },
 
   {path:'profile-update',component:ProfileUpdateComponent},
+  
 
   {path:'category',component:CategoryComponent},
   {
