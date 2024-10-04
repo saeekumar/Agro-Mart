@@ -650,46 +650,6 @@
 
 <!-- Growth Promoters -->
 
-<div class="main-bg">
-<br />
 
-<div class="container">
-  <h3 class="text-left">Growth Promoters</h3>
-  <br />
-  <div class="product-scroll">
-    <div
-      class="product-card col-12 col-md-6 col-lg-4"
-      *ngFor="let product of products"
-    >
-      <div class="d-flex flex-row position-relative">
-        <div class="discount-tag">
-          <span>50%</span>
-        </div>
-        <div>
-          <img src="{{ product.img }}" class="product-card-img" />
-          <h1>{{ product.title }}</h1>
-          <p>{{ product.category }}</p>
-          <div class="d-flex flex-row">
-            <h6>{{ product.rupee | currency : 'INR' }}</h6>
-            <h6 class="text-secondary mx-2">
-              {{ product.orgRupee | currency : 'INR' }}
-            </h6>
-          </div>
-          <i class="fa-solid fa-tag i-design">
-            <span>saved price {{ product.rupee | currency : 'INR' }}</span>
-          </i>
-          <div class="d-flex flex-row my-2">
-            <h6>Size:</h6>
-            <button class="btn btn-outline-dark mx-2">Select quantity</button>
-          </div>
-        </div>
-        <div>
-          <i class="fa-regular fa-heart"></i>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> 
-  
   
 
