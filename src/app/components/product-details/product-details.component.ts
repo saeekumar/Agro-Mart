@@ -30,11 +30,11 @@ export class ProductDetailsComponent {
 
   getProducts() {
     console.log('calling api..');
-    
+
     this.productServ.getAllProducts().subscribe({
       next: (res: any) => {
-        console.log('api response',res);
-        
+        console.log('api response', res);
+
         if (res.success === 1) {
           this.products = res.data;
           console.log(this.products, 'new data');
@@ -44,10 +44,8 @@ export class ProductDetailsComponent {
       },
       error: (e) => {
         // console.log(e.msg)
-        console.log('Api call fail',e);
+        console.log('Api call fail', e);
       },
     });
   }
-
-
 }
