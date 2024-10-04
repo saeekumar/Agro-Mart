@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ProductService } from 'src/app/_services/product.service';
-import { ProfileUpdateService } from 'src/app/_services/profile-update.service';
+import { ProfileDetailsService } from 'src/app/_services/profile-details.service';
+
+
 
 @Component({
   selector: 'app-profile-details',
@@ -14,7 +16,7 @@ export class ProfileDetailsComponent {
   empDetails: any;
   users:any;
 
-  constructor(private profileServ: ProfileUpdateService) {
+  constructor(private profileServ: ProfileDetailsService) {
    
   }
 
@@ -23,7 +25,7 @@ export class ProfileDetailsComponent {
   }
   getProfileData() {
     this.profileServ.getProfileDetails().subscribe({
-      next: (res) => {
+      next: (res:any) => {
         if (res.success === 1) {
           this.empDetails = res.data[0];
           console.log(this.empDetails, 'new data');
@@ -31,7 +33,7 @@ export class ProfileDetailsComponent {
           console.log(res.msg);
         }
       },
-      error: (e) => {
+      error: (e:any) => {
         // console.log(e.msg);
         console.log(e, 'error');
       },

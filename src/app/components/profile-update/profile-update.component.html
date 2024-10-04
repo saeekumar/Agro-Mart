@@ -1,74 +1,115 @@
 <div class="container-xl px-4 mt-4">
-    <hr class="mt-0 mb-4">
-    <div class="row">
-        <div class="col-xl-4">
-            <!-- Profile picture card-->
-            <div class="card mb-4 mb-xl-0">
-                <div class="card-header">Profile Picture</div>
-                <div class="card-body text-center">
-                    <!-- Profile picture image-->
-                    <img class="img-account-profile  mb-2 rounded-circle" style="width: 10rem; height: 12rem;"  src="https://i2.pickpik.com/photos/711/14/431/smile-profile-face-male-preview.jpg" alt="">
-                    <!-- Profile picture help block-->
-                    <div class="small font-italic text-muted mb-4"><strong>Name</strong></div>
-            
-                </div>
-            </div>
+  <hr class="mt-0 mb-4" />
+  <div class="row">
+    <div class="col-xl-4">
+      <div class="card mb-4 mb-xl-0">
+        <div class="card-header">Profile Picture</div>
+        <div class="card-body text-center">
+          <img
+            class="img-account-profile mb-2 rounded-circle"
+            style="width: 10rem; height: 12rem"
+            src="https://i2.pickpik.com/photos/711/14/431/smile-profile-face-male-preview.jpg"
+            alt=""
+          />
+          <div class="small font-italic text-muted mb-4">
+            <strong>Name</strong>
+          </div>
         </div>
-        <div class="col-xl-8">
-            <!-- Account details card-->
-            <div class="card mb-4">
-                <div class="card-header">Profile Details Update</div>
-                <div class="card-body">
-                    <form>
-                        <!-- Form Group (username)-->
-                        <div class="mb-3">
-                            <label class="small mb-1" for="inputUsername"><strong>Id</strong></label>
-                            <input class="form-control" id="inputUsername" type="number" placeholder="Enter your Id" >
-                        </div>
-                        <!-- Form Row-->
-                        <div class="row gx-3 mb-3">
-                            <!-- Form Group (first name)-->
-                            <div class="col-md-6">
-                                <label class="small mb-1" for="inputFirstName"><strong>Name</strong></label>
-                                <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your name" >
-                            </div>
-                            <!-- Form Group (last name)-->
-                            <div class="col-md-6">
-                                <label class="small mb-1" for="inputLastName"><strong>Email</strong></label>
-                                <input class="form-control" id="inputLastName" type="email" placeholder="Enter your email">
-                            </div>
-                        </div>
-                        <!-- Form Row        -->
-                        <div class="row gx-3 mb-3">
-                            <!-- Form Group (organization name)-->
-                            <div class="col-md-6">
-                                <label class="small mb-1" for="inputOrgName"><strong>Gender</strong></label>
-                                <input class="form-control" id="inputOrgName" type="text" placeholder="Enter your gender" >
-                            </div>
-                            <!-- Form Group (location)-->
-                            <div class="col-md-6">
-                                <label class="small mb-1" for="inputLocation"><strong>Phone Number</strong></label>
-                                <input class="form-control" id="inputLocation" type="number" placeholder="Enter your phone number" >
-                            </div>
-                        </div>
-                        <!-- Form Group (email address)-->
-                        <div class="mb-3">
-                            <label class="small mb-1" for="inputEmailAddress"><strong>Address</strong></label>
-                            <input class="form-control" id="inputEmailAddress" type="address" placeholder="Enter your  address" >
-                        </div>
-                        <!-- Form Row-->
-                        <div class="row gx-3 mb-3">
-                            <!-- Form Group (phone number)-->
-                            <div class="col-md-6">
-                                <label class="small mb-1" for="inputPhone"><strong>Pincode</strong></label>
-                                <input class="form-control" id="inputPhone" type="pincode" placeholder="Enter your  pincode" >
-                            </div>
-                        </div>
-                        <!-- Save changes button-->
-                        <button class="btn btn-primary" type="button">Save changes</button>
-                    </form>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+    <div class="col-xl-8">
+      <div class="card mb-4">
+        <div class="card-header">Profile Details Update</div>
+        <div class="card-body">
+          <form>
+            <div class="mb-3">
+              <label class="small mb-1" for="inputUsername"
+                ><strong>Id</strong></label
+              >
+              <input
+                class="form-control"
+                id="inputUsername"
+                type="number"
+                placeholder="Enter your Id"
+              />
+            </div>
+            <div class="row gx-3 mb-3">
+              <div class="col-md-6">
+                <label class="small mb-1" for="inputFirstName"
+                  ><strong>Name</strong></label
+                >
+                <input
+                  class="form-control"
+                  id="inputFirstName"
+                  type="text"
+                  placeholder="Enter your name"
+                />
+              </div>
+
+              <div class="col-md-6">
+                <label class="small mb-1" for="inputLastName"
+                  ><strong>Email</strong></label
+                >
+                <input
+                  class="form-control"
+                  id="inputLastName"
+                  type="email"
+                  placeholder="Enter your email"
+                />
+              </div>
+            </div>
+            <div class="row gx-3 mb-3">
+              <div class="col-md-6">
+                <label class="small mb-1" for="inputOrgName"
+                  ><strong>Gender</strong></label
+                >
+                <input
+                  class="form-control"
+                  id="inputOrgName"
+                  type="text"
+                  placeholder="Enter your gender"
+                />
+              </div>
+              <div class="col-md-6">
+                <label class="small mb-1" for="inputLocation"
+                  ><strong>Phone Number</strong></label
+                >
+                <input
+                  class="form-control"
+                  id="inputLocation"
+                  type="number"
+                  placeholder="Enter your phone number"
+                />
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="small mb-1" for="inputEmailAddress"
+                ><strong>Address</strong></label
+              >
+              <input
+                class="form-control"
+                id="inputEmailAddress"
+                type="address"
+                placeholder="Enter your  address"
+              />
+            </div>
+            <div class="row gx-3 mb-3">
+              <div class="col-md-6">
+                <label class="small mb-1" for="inputPhone"
+                  ><strong>Pincode</strong></label
+                >
+                <input
+                  class="form-control"
+                  id="inputPhone"
+                  type="pincode"
+                  placeholder="Enter your  pincode"
+                />
+              </div>
+            </div>
+            <button class="btn btn-primary" type="button">Save changes</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,4 +1,4 @@
-import { NgModule,NO_ERRORS_SCHEMA } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,7 +28,7 @@ import { TokenService } from './_services/token.service';
 import { ProfileDetailsComponent } from './components/profile-details/profile-details.component';
 import { ProfileUpdateComponent } from './components/profile-update/profile-update.component';
 import { CategoryComponent } from './components/category/category.component';
-import { CommonModule } from '@angular/common';
+
 
 @NgModule({
   declarations: [
@@ -62,7 +62,7 @@ import { CommonModule } from '@angular/common';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    CommonModule
+    
   ],
     
     

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ProfileUpdateService } from 'src/app/_services/profile-update.service';
+import { ProfileDetailsService } from 'src/app/_services/profile-details.service';
 
 @Component({
   selector: 'app-profile-update',
@@ -8,5 +9,5 @@ import { ProfileUpdateService } from 'src/app/_services/profile-update.service';
 })
 export class ProfileUpdateComponent {
 
-  
+ 
 }
