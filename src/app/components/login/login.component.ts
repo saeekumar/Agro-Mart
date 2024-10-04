@@ -5,15 +5,12 @@ import { LoginService } from 'src/app/_services/login.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-  loginForm:FormGroup;
+  loginForm: FormGroup;
 
-  
-
-  constructor( private router:Router,private loginServ:LoginService){
-
+  constructor(private router: Router, private loginServ: LoginService) {
     this.loginForm = new FormGroup({
       phone: new FormControl('', [
         Validators.required,
@@ -23,10 +20,9 @@ export class LoginComponent {
       password: new FormControl('', [
         Validators.required,
         Validators.minLength(6),
-        Validators.maxLength(6)
+        Validators.maxLength(6),
       ]),
     });
-    
   }
   ngOnInit(): void {}
   checkLogin() {
@@ -43,13 +39,21 @@ export class LoginComponent {
             alert(res.msg);
           }
         },
-        error: (e) => {},
+        error: (e) => {
+          if (e?.error?.msg) {
+            alert(e.error.msg);
+          } else {
+            alert(e.msg);
+          }
+          console.log(e, 'error');
+          // alert(e.msg);
+        },
       });
     } else {
       alert('invalid form');
     }
 
-    alert("login sucessfully")   
+    // alert('login sucessfully');
   }
 
   getfun(password: any) {
@@ -57,9 +61,7 @@ export class LoginComponent {
     this.router.navigate(['']);
   }
 
-  get loginFC(){
+  get loginFC() {
     return this.loginForm.controls;
   }
-
- 
 }
