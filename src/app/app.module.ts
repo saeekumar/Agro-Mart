@@ -31,7 +31,6 @@ import { CategoryComponent } from './components/category/category.component';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
-  schemas: [NO_ERRORS_SCHEMA],
   declarations: [
     AppComponent,
     SyngentaSeedsComponent,
@@ -53,6 +52,7 @@ import { CommonModule } from '@angular/common';
     ProfileDetailsComponent,
     ProfileUpdateComponent,
     CategoryComponent,
+    ProductDetailsComponent
     
   ],
   imports: [
