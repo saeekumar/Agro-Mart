@@ -52,8 +52,16 @@ export class ContactUsComponent {
             this.router.navigate(['']);
           }
         },
-        error: (e) => {},
-      });
+        error: (e) => {
+          // if (e?.error?.msg) {
+          //   alert(e.error.msg);
+          // } else {
+          //   alert(e.msg);
+          // }
+          console.log(e, 'error');
+          alert(e.msg);
+        },    
+        });
     } else {
       alert('invalid form');
     }
