@@ -27,9 +27,9 @@ export class SignupComponent {
     console.log(this.signUpForm.value)
     if(this.signUpForm.valid){
     this.signUpServ.createCustomer(this.signUpForm.value).subscribe({next:(res)=>{
-      if(res.status_code==200){
-        alert(res.message);
-        
+      if(res.success==1){
+        alert(res.msg);
+        this.signUpForm.reset()
       }else{
         alert(res.msg)
       }
