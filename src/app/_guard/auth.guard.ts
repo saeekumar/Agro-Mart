@@ -13,8 +13,10 @@ export class AuthGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
    if(this.loginServ.IsLoggedIn()){
-    return true
     
+    return true
+
+
    }
    else{
     alert("you are not loggedin,please login in")
