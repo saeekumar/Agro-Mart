@@ -23,37 +23,37 @@
                       <a class="fa-solid fa-pen-to-square" style="color: black;" routerLink="/profile-update"></a>
                   </div>
               </div>            
-              <div class="card-body">
+              <div class="card-body" *ngIf="empDetails">
                   <form>                    
                       <div class="mb-3">
-                          <label class="small mb-1" ><strong>Id :</strong></label>    
+                          <label class="small mb-1" ><strong>Id :</strong> {{empDetails.id}}</label>    
                       </div>                    
                       <div class="row gx-3 mb-3">                         
                           <div class="col-md-3">
-                              <label class="small mb-1" ><strong>Name :</strong></label>
+                              <label class="small mb-1" ><strong>Name : </strong>{{empDetails.name}}</label>
                           </div>                        
                       </div>
                       <div class="row gx-3 mb-3">                         
                           <div class="col-md-3">
-                              <label class="small mb-1" ><strong>Gender :</strong></label>                        
+                              <label class="small mb-1" ><strong>Gender : </strong>{{empDetails.gender}}</label>                        
                               </div>
                       </div>                     
                       <div class="mb-3">
-                          <label class="small mb-1" for="inputEmailAddress"><strong>Email :</strong></label>
+                          <label class="small mb-1" for="inputEmailAddress"><strong>Email :</strong>anandaccumenta970gmail.com {{empDetails.email}}</label>
                       </div>                     
                       <div class="row gx-3 mb-3">                        
                           <div class="col-md-6">
-                              <label class="small mb-1" for="inputPhone"><strong>Phone number :</strong></label>
+                              <label class="small mb-1" for="inputPhone"><strong>Phone number : </strong>{{empDetails.phone}}</label>
                           </div>  
                       </div>                    
                       <div class="row gx-3 mb-3">
                           <div class="col-md-6">
-                              <label class="small mb-1" for="inputPhone"><strong>Address :</strong></label>
+                              <label class="small mb-1" for="inputPhone"><strong>Address : </strong>madhuranagar hyd</label>
                           </div>  
                       </div>
                       <div class="row gx-3 mb-3">
                           <div class="col-md-6">
-                              <label class="small mb-1" for="inputPhone"><strong>Pincode :</strong></label>
+                              <label class="small mb-1" for="inputPhone"><strong>Pincode :</strong>500073</label>
                           </div>  
                       </div>  
                   </form>

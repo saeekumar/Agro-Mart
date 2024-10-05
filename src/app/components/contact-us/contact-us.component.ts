@@ -59,14 +59,14 @@ export class ContactUsComponent {
           //   alert(e.msg);
           // }
           console.log(e, 'error');
-          // alert(e.msg);
+          alert(e.msg);
         },    
         });
     } else {
       alert('invalid form');
     }
 
-     
+      alert("login sucessfully")
   }
 
   get contactFC() {
