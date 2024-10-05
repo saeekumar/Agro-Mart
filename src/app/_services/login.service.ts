@@ -9,6 +9,9 @@ import { observableToBeFn } from 'rxjs/internal/testing/TestScheduler';
 export class LoginService {
  
   constructor(private http:HttpClient) { }
+  IsLoggedIn(){
+    return localStorage.getItem('token')!=null;
+  }
 
   loginEmployee(data:any):Observable<any>{
   return this.http.post('http://localhost:3000/api/employees/login',data)
