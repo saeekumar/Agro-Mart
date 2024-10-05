@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,7 +20,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PaymentsComponent } from './components/payments/payments.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
-import { HttpClientModule } from '@angular/common/http';
+import { AboutUsComponent } from './components/about-us/about-us.component'
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import { LoginService } from './_services/login.service';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { TokenService } from './_services/token.service';
+import { ProfileDetailsComponent } from './components/profile-details/profile-details.component';
+import { ProfileUpdateComponent } from './components/profile-update/profile-update.component';
+import { CategoryComponent } from './components/category/category.component';
+
 
 @NgModule({
   declarations: [
@@ -38,7 +46,14 @@ import { HttpClientModule } from '@angular/common/http';
     CartComponent,
     OrderComponent,
     ProductsComponent,
+    AboutUsComponent,
     SeedsComponent,
+    ContactUsComponent,
+    ProfileDetailsComponent,
+    ProfileUpdateComponent,
+    CategoryComponent,
+    ProductDetailsComponent
+    
   ],
   imports: [
     FormsModule,
@@ -47,7 +62,13 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    
   ],
-  bootstrap: [AppComponent],
+    
+    
+  providers:[{provide:HTTP_INTERCEPTORS,useClass:TokenService,multi:true}],
+
+  bootstrap: [AppComponent]
+  
 })
 export class AppModule {}

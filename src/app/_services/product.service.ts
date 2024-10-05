@@ -1,5 +1,7 @@
+import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
@@ -7,27 +9,24 @@ import { Observable } from 'rxjs';
 
 
 export class ProductService {
-  
-   Product: any[] = [
-    {
-      id: 1,
-      name: 'Product 1',
-      description: 'Description for Product 1',
-      price: 29.99,
-      imageUrl: 'https://via.placeholder.com/400x200?text=Product+1',
-      rating: 4.5,
-    },
-    {
-      id: 2,
-      name: 'Product 2',
-      description: 'Description for Product 2',
-      price: 39.99,
-      imageUrl: 'https://via.placeholder.com/400x200?text=Product+2',
-      rating: 3.8,
-    },
-  ]
-  constructor() { }
-  
+
+
+  constructor(private http:HttpClient) {}
+
+    getAllProducts():Observable<any>{
+      // let headers = new HttpHeaders().set('Authorization', 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibmFtZSI6InNhaSBrdW1hciIsInBob25lIjoiOTU1MDI4NDMxOSIsImlhdCI6MTcyNzg4MzM4NiwiZXhwIjoxNzI3ODk0MTg2fQ.O1Nea40Slj8-SXM3wBwyu3D2KGD8anYHrPSIpV-IuL0'); 
+      return this.http.get('http://localhost:3001/api/products')
+    }
+
+    getproductById(id:string):Observable<any>{    
+      return this.http.get(`http://localhost:3001/api/product/${id}`)
+    }
+
+    getproductBycategory():Observable<any>{
+       return this.http.get('http://localhost:3001/api/product/by-category')
+    }
+   
 }
+
 
 

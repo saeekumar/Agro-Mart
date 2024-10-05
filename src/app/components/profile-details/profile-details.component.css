@@ -1,0 +1,16 @@
+.icon-container {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    color: black;
+   
+}
+ 
+.top-right-icon {
+    width: 30px; /* Adjust size as needed */
+    height: auto;
+}
+ 
+.icon-container a:hover{
+     color: green
+    }

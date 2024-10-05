@@ -1,0 +1,35 @@
+<div class="container">
+  <!-- Displaying the single category if available -->
+  <div *ngIf="singleCategory" class="row mb-3">
+    <div class="card">
+      <p>ID: {{ singleCategory.id }}</p>
+      <p>Name: {{ singleCategory.c_name }}</p>
+      <div class="align-center">
+        <img
+          [src]="singleCategory.c_image"
+          [alt]="singleCategory.c_name"
+          class="img-fluid"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- Displaying the list of categories -->
+  <div *ngIf="!singleCategory" class="row">
+    <ng-container *ngFor="let category of categories">
+      <div class="card col-md-2">
+        <p>ID: {{ category.id }}</p>
+        <p>Name: {{ category.c_name }}</p>
+        <div class="align-center">
+          <img
+            [src]="category.c_image"
+            [alt]="category.c_name"
+            class="img-fluid"
+          />
+        </div>
+        <a [routerLink]="['/category', category.id]">View Details</a>
+        <!-- Link to category detail -->
+      </div>
+    </ng-container>
+  </div>
+</div>
