@@ -28,7 +28,7 @@ import { TokenService } from './_services/token.service';
 import { ProfileDetailsComponent } from './components/profile-details/profile-details.component';
 import { ProfileUpdateComponent } from './components/profile-update/profile-update.component';
 import { CategoryComponent } from './components/category/category.component';
-
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -62,6 +62,12 @@ import { CategoryComponent } from './components/category/category.component';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    ToastrModule.forRoot({
+      timeOut: 3000,
+      positionClass: 'toast-top-right',
+      preventDuplicates: true,
+      progressBar: true,
+    })
     
   ],
     

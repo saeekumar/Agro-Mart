@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { SignupService } from 'src/app/_services/signup.service';
+import { ToastrService } from 'src/app/_services/toastr.service';
 
 @Component({
   selector: 'app-signup',
@@ -10,7 +12,7 @@ import { SignupService } from 'src/app/_services/signup.service';
 export class SignupComponent {
   signUpForm: FormGroup;
 
-  constructor(private signUpServ:SignupService) {
+  constructor(private signUpServ:SignupService,private toastrSer: ToastrService,private router:Router) {
     this.signUpForm = new FormGroup({
       name: new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(50)]),
       gender: new FormControl('', [Validators.required]),
@@ -28,10 +30,12 @@ export class SignupComponent {
     if(this.signUpForm.valid){
     this.signUpServ.createCustomer(this.signUpForm.value).subscribe({next:(res)=>{
       if(res.success==1){
-        alert(res.msg);
+        this.toastrSer.success(res.msg);
         this.signUpForm.reset()
+        this.router.navigate([''])
       }else{
         alert(res.msg)
+        this.toastrSer.error(res.msg);
       }
     },error:(err)=>{
       console.log("error",err)
