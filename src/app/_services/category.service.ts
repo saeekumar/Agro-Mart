@@ -7,13 +7,23 @@ import { Observable } from 'rxjs';
 })
 export class CategoryService {
 
+  private baseUrl = 'http://localhost:3001/api/category';
+
   constructor(private http:HttpClient) {}
 
-    getCategoryById():Observable<any>{
+    getCategoryById(id:any):Observable<any>{
 
-      let headers = new HttpHeaders().set('Authorization', 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibmFtZSI6InNhaSBrdW1hciIsInBob25lIjoiOTU1MDI4NDMxOSIsImlhdCI6MTcyNzg1Mjc5NSwiZXhwIjoxNzI3ODYzNTk1fQ.96J9S3_RWrlXaMJwwyvE13XxxdXRcPM0dMWpFwffY4E');
+      let headers = new HttpHeaders().set('Authorization', 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibmFtZSI6InNhaSBrdW1hciIsInBob25lIjoiOTU1MDI4NDMxOSIsImlhdCI6MTcyODEwODk5NCwiZXhwIjoxNzI4MTE5Nzk0fQ.xd9cxmuQwjVl0SFhq6klfHqxAxFfdXfNmR2CHuWBLLA');
       
-      return this.http.get('http://localhost:3000/api/category', {headers})
+      return this.http.get(`${this.baseUrl}/${id}`, {headers})
+    }
+
+    getCategories():Observable<any>{
+      let headers = new HttpHeaders().set('Authorization', 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibmFtZSI6InNhaSBrdW1hciIsInBob25lIjoiOTU1MDI4NDMxOSIsImlhdCI6MTcyODEwODk5NCwiZXhwIjoxNzI4MTE5Nzk0fQ.xd9cxmuQwjVl0SFhq6klfHqxAxFfdXfNmR2CHuWBLLA');
+
+      return this.http.get('http://localhost:3001/api/category',{headers})
     }
    
 }
+
+

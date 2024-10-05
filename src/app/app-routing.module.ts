@@ -23,6 +23,7 @@ const routes: Routes = [
   
 
   {path:'category',component:CategoryComponent},
+  {path:'category/:id',component:CategoryComponent},
   {
     component: ProductsComponent,
     path: '',
@@ -57,6 +58,8 @@ const routes: Routes = [
   },
   { component: TrackOrderComponent, path: 'trackorder' },
   { component: ProductDetailsComponent, path: 'product-details' },
+  { component: ProductDetailsComponent, path: 'product-details/:id' },
+  { component: ProductDetailsComponent, path: 'product-details/by-category' },
   { component: SyngentaSeedsComponent, path: 'syngentaseeds' },
   { component: ContactUsComponent, path: 'contact-us' },
 
