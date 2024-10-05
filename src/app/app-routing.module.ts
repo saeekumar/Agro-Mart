@@ -15,8 +15,6 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 import { ProfileDetailsComponent } from './components/profile-details/profile-details.component';
 import { ProfileUpdateComponent } from './components/profile-update/profile-update.component';
 import { CategoryComponent } from './components/category/category.component';
-import { AuthGuard } from './_guard/auth.guard';
-// import { AuthGuard } from './_guard/auth.guard';
 
 const routes: Routes = [
    { path: 'profile-details', component: ProfileDetailsComponent },
@@ -35,7 +33,7 @@ const routes: Routes = [
   },
   {
     component: WishlistComponent,
-    path: 'wishlist',canActivate:[AuthGuard]
+    path: 'wishlist',
   },
   {
     component: PaymentsComponent,
@@ -57,13 +55,11 @@ const routes: Routes = [
     component: AboutUsComponent,
     path: 'aboutUs',
   },
-  { component: TrackOrderComponent, path: 'trackorder',canActivate:[AuthGuard]},
-  { component: ProductDetailsComponent, path: 'product-details', },
+  { component: TrackOrderComponent, path: 'trackorder' },
+  { component: ProductDetailsComponent, path: 'product-details' },
   { component: SyngentaSeedsComponent, path: 'syngentaseeds' },
-  { component: ContactUsComponent, path: 'contact-us',},
-  
+  { component: ContactUsComponent, path: 'contact-us' },
 
-  
 
 
   
