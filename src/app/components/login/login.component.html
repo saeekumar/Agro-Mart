@@ -4,7 +4,7 @@
       <div class="col-8 col-md-6 col-lg-6 col-xl-4">
         <div class="card bg-light text-black mt-5" style="border-radius: 1rem;">
           <div class="card-body p-2 ">
-           <form [formGroup]="loginForm"(ngsubmit)="checkLogin()">
+           <form [formGroup]="loginForm">
             <div class="mb-md-5 mt-md-1">
 
               <h2 class=" mb-5 text-uppercase text-center">Login</h2>
@@ -12,7 +12,9 @@
 
               <div data-mdb-input-init class="form-outline form-white mb-4">
                 <label class="form-label" for="typemobilenumberX" >Phone Number</label>
-                <input class="form-control" formControlName="phone" placeholder="Enter a mobile number">
+                <!-- <input class="form-control" formControlName="phone" placeholder="Enter a mobile number"> -->
+                <input #phone type="text" class="form-control" formControlName="phone" placeholder="Phone number" />
+
      
         <div *ngIf="loginFC['phone'].errors">
            <span class="text-danger" *ngIf="loginFC['phone'].touched&&loginFC['phone'].errors['required']">Phone number Required
@@ -41,7 +43,8 @@
              <div class="text-center">
 
               <br>
-              <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg px-5" type="submit" (click)="checkLogin()">Login</button>
+
+              <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg px-5" type="submit" (click)="checkLogin(phone.value)">Login</button>
               <br>
               <br>
               <div>

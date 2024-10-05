@@ -9,7 +9,6 @@ import { LoginService } from 'src/app/_services/login.service';
 })
 export class LoginComponent {
   loginForm: FormGroup;
-
   constructor(private router: Router, private loginServ: LoginService) {
     this.loginForm = new FormGroup({
       phone: new FormControl('', [
@@ -25,7 +24,7 @@ export class LoginComponent {
     });
   }
   ngOnInit(): void {}
-  checkLogin() {
+  checkLogin(phone:string) {
     console.log('login called', this.loginForm.value, this.loginForm.valid);
     if (this.loginForm.valid) {
       this.loginServ.loginEmployee(this.loginForm.value).subscribe({
@@ -34,6 +33,7 @@ export class LoginComponent {
             this.loginServ.setToken(res.data.accessToken);
             alert(res.msg);
             this.loginForm.reset();
+            localStorage.setItem('phone number',phone); 
             this.router.navigate(['']);
           } else {
             alert(res.msg);
@@ -53,7 +53,6 @@ export class LoginComponent {
       alert('invalid form');
     }
 
-    // alert('login sucessfully');
   }
 
   getfun(password: any) {

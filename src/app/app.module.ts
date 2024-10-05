@@ -6,7 +6,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SyngentaSeedsComponent } from './components/syngenta-seeds/syngenta-seeds.component';
 import { TrackOrderComponent } from './components/track-order/track-order.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
-
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
